@@ -6,9 +6,9 @@ no se inventa lore aquí.
 - `index.html`: portada, cosmología y los siete estratos.
 - `estratos/`: una página por estrato publicado (copia `boca-de-ceniza.html` para los nuevos).
 - `peregrinos.html`, `bestiario.html`.
-- `css/osario.css`: estilos y componentes (`.nota`, `.nota.rumor`, `.nota.errata`, `.arrancada`, `.tarjeta`, `.tabla`,
+- `css/osario.css`: estilos con la paleta del juego (`docs/diseno.md`); cada estrato con su acento, y componentes (`.nota`, `.nota.rumor`, `.nota.errata`, `.arrancada`, `.tarjeta`, `.tabla`,
   `.btn`, `.estratos`).
-- `fonts/`: Jacquard 24, IM Fell English y Pixelify Sans (SIL OFL, con sus licencias).
+- `fonts/`: las del juego, IM Fell English (y SC) y VT323 (SIL OFL, con sus licencias).
 
 Publicar: Settings → Pages → Deploy from a branch → `main`, carpeta `/`.
 
