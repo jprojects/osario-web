@@ -6,23 +6,25 @@
 @font-face{font-family:"IM Fell English SC";src:url("../fonts/IMFellEnglishSC-Regular.ttf") format("truetype");font-display:swap}
 @font-face{font-family:"IM Fell English";src:url("../fonts/IMFellEnglish-Regular.ttf") format("truetype");font-display:swap}
 @font-face{font-family:"IM Fell English";font-style:italic;src:url("../fonts/IMFellEnglish-Italic.ttf") format("truetype");font-display:swap}
+@font-face{font-family:"Pirata One";src:url("../fonts/PirataOne-Regular.ttf") format("truetype");font-display:swap}
 @font-face{font-family:"VT323";src:url("../fonts/VT323-Regular.ttf") format("truetype");font-display:swap}
 
 :root{
-  /* Paleta del juego (docs/diseno.md de Candlewake): guía impresa en negro y escaneada */
-  --noche:#0a0806;     /* fuera de la página */
-  --papel:#17120e;     /* página */
-  --recuadro:#221a14;  /* recuadros, botones, tarjetas */
-  --filete:#3a2e24;    /* filetes y bordes */
-  --tinta-suave:#8c7f6c; /* texto secundario */
-  --hueso:#d9cdb2;     /* texto */
-  --pergamino:#b5a88f; /* cursivas y citas */
-  --oxido:#b0452f;     /* notas, erratas, Podredumbre */
+  /* Paleta del juego (docs/diseno.md de Candlewake, 0.15.0): un libro encuadernado con las páginas verdes de moho */
+  --noche:#080a07;     /* fuera del libro */
+  --papel:#161a12;     /* página, verde de moho */
+  --recuadro:#1f2418;  /* recuadros, botones, tarjetas */
+  --filete:#353c2a;    /* filetes y bordes */
+  --tinta-suave:#8b8d72; /* texto secundario */
+  --hueso:#d6d4b9;     /* texto */
+  --pergamino:#b4b398; /* cursivas y citas */
+  --oxido:#a9472f;     /* notas, erratas, Podredumbre */
   --vela:#c46e28;      /* enlaces: lo único cálido, como las velas del Pozo */
   --llama:#f5c46e;     /* hover, brillo de vela */
   --acento:var(--tinta-suave); /* cada estrato tiene el suyo (pack.json → acento) */
 
-  --f-titulo:"IM Fell English SC",Georgia,serif;
+  --f-gotica:"Pirata One","IM Fell English SC",Georgia,serif; /* títulos, como en el juego */
+  --f-titulo:"IM Fell English SC",Georgia,serif;  /* etiquetas pequeñas */
   --f-texto:"IM Fell English",Georgia,serif;
   --f-ui:"VT323",monospace;
 
@@ -47,7 +49,7 @@ body::after{
   content:"";position:fixed;inset:0;pointer-events:none;z-index:50;
   background:
     radial-gradient(ellipse at center,transparent 45%,var(--noche) 100%),
-    repeating-conic-gradient(#0000 0 25%,#0a08064d 0 50%) 0 0/4px 4px;
+    repeating-conic-gradient(#0000 0 25%,#080a074d 0 50%) 0 0/4px 4px;
 }
 
 img{max-width:100%;image-rendering:pixelated}
@@ -56,7 +58,7 @@ a{color:var(--vela);text-decoration-thickness:1px;text-underline-offset:3px}
 a:hover,a:focus-visible{color:var(--llama);text-shadow:0 0 6px var(--vela)}
 :focus-visible{outline:2px solid var(--llama);outline-offset:3px}
 
-h1,h2,h3{font-family:var(--f-titulo);font-weight:400;line-height:1.05;margin:0 0 .4em;text-wrap:balance}
+h1,h2,h3{font-family:var(--f-gotica);font-weight:400;line-height:1.05;margin:0 0 .4em;text-wrap:balance}
 h1{font-size:clamp(52px,9vw,104px)}
 h2{font-size:clamp(34px,5vw,52px)}
 h3{font-size:30px}
@@ -73,7 +75,7 @@ em,i{color:var(--pergamino)}
 }
 .nav a{color:var(--tinta-suave);text-decoration:none}
 .nav a:hover,.nav a[aria-current]{color:var(--llama)}
-.nav .marca{font:26px var(--f-titulo);color:var(--hueso);margin-right:auto}
+.nav .marca{font:30px var(--f-gotica);color:var(--hueso);margin-right:auto}
 
 /* ---------- Portada ---------- */
 .portada{
@@ -108,8 +110,8 @@ em,i{color:var(--pergamino)}
 /* ---------- Páginas de la guía ---------- */
 .pagina{background:var(--papel);border:1px solid var(--filete);max-width:calc(var(--ancho) + 2 * max(5vw,16px));margin:32px auto 48px;padding:clamp(32px,6vw,72px) max(5vw,16px) 96px;position:relative}
 .pagina h1{font-size:clamp(48px,7vw,84px)}
-.pagina h1,.estrato-num{color:var(--acento)}
-.estrato-num{font:20px var(--f-ui);color:var(--tinta-suave)}
+.pagina h1{color:var(--acento)}
+.estrato-num{font:22px var(--f-titulo);letter-spacing:.08em;color:var(--tinta-suave)}
 .lema{font-size:21px;font-style:italic;color:var(--pergamino);border-left:2px solid var(--filete);padding-left:16px;margin:24px 0}
 
 /* Nota de la guía: CONSEJO, RUMOR, ERRATA, TRUCO */

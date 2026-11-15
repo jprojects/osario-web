@@ -8,7 +8,7 @@ no se inventa lore aquí.
 - `peregrinos.html`, `bestiario.html`.
 - `css/osario.css`: estilos con la paleta del juego (`docs/diseno.md`); cada estrato con su acento, y componentes (`.nota`, `.nota.rumor`, `.nota.errata`, `.arrancada`, `.tarjeta`, `.tabla`,
   `.btn`, `.estratos`).
-- `fonts/`: las del juego, IM Fell English (y SC) y VT323 (SIL OFL, con sus licencias).
+- `fonts/`: las del juego, Pirata One (títulos), IM Fell English (y SC) y VT323 (SIL OFL, con sus licencias).
 
 Publicar: Settings → Pages → Deploy from a branch → `main`, carpeta `/`.
 
